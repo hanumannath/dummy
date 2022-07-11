@@ -1,0 +1,14 @@
+
+
+<div class="main">
+ 
+    {% for data in probs %}
+ 
+    <a href="./{{data.id}}/"><h2>{{data.id}} - {{ data.name }}</h2></a>
+    {{ data.statement }}<br/>
+    {{ data.difficulty }}<br/>
+    <hr/>
+ 
+    {% endfor %}
+ 
+</div>

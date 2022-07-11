@@ -1,0 +1,23 @@
+<head>
+    <style>
+    h1 {text-align: center;}
+    tr {text-align: center;}
+    table {text-align: center;}
+    </style>
+</head>
+<table>
+    <tr>
+        <th>Problem</th>
+        <th>Verdict</th>
+        <th>Code</th>
+        <th>Time</th>
+    </tr>
+    {% for item in qs %}
+    <tr> 
+        <td>{{ item.curr_problem.name }}</td>
+        <td>{{ item.verdict }}</td>
+        <td><a href="./code/{{item.id}}">code</a></td>
+        <td>{{ item.time_of_submit }}</td>
+    </tr>
+    {% endfor %}
+</table>
